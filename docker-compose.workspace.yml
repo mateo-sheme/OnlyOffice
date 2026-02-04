@@ -146,7 +146,7 @@ services:
       - '443'
     restart: always
     volumes:
-      - /root/onlyoffice/control_panel/var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
       - /root/onlyoffice/control_panel/controlpanel_data:/var/www/onlyoffice/Data
       - /root/onlyoffice/control_panel/controlpanel_log:/var/log/onlyoffice
     networks:
