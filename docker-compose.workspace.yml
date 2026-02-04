@@ -59,8 +59,8 @@ services:
      - /root/onlyoffice/community_server/community_log:/var/log/onlyoffice
      - /root/onlyoffice/community_server/community_letsencrypt:/etc/letsencrypt
      - /root/onlyoffice/community_server/document_data:/var/www/onlyoffice/DocumentServerData
-     - /root/onlyoffice/community_server/sys/fs/cgroup:/sys/fs/cgroup:rw
-     - /root/onlyoffice/community_server/certs:/var/www/onlyoffice/Data/certs
+     - /sys/fs/cgroup:/sys/fs/cgroup:rw
+     - ./certs:/var/www/onlyoffice/Data/certs
   onlyoffice-elasticsearch:
     image: onlyoffice/elasticsearch:7.16.3
     container_name: onlyoffice-elasticsearch
